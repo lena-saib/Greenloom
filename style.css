@@ -7,7 +7,7 @@ body {
   color: #000000;
   background: #fff;
   max-width: 100%;
-  
+
 }
 
 section {
@@ -24,27 +24,7 @@ h2{
 
 /* 2. HEADER             */
 
-header {
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-bottom: 1px solid #ddd;
-}
-.header-container {
-  width: 90%;
-  display: flex;
-  align-content: center;
-  justify-content: flex-start;
-}
-.logo {
-  height: 60px;
-}
-.menu {
-  list-style: none;
-  display: flex;
-  gap: 30px;
-}
+
 .menu li a {
   text-decoration: none;
   color: #000000;
@@ -52,13 +32,78 @@ header {
 
 }
 
+.menu-deroulant {
+  transition: 100ms ;
+}
+.menu-deroulant:hover {
+
+  .sous-menu {
+    display: flex;
+  }
+}
+
+.sous-menu {
+  display: none;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  padding: 0 5px;
+
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+
+  transition: 100ms ;
+
+}
+
+.sous-menu li:hover {
+  border-bottom:solid 2px #634841;
+}
+
+header {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+
+  
+
+}
+.header-container {
+  width: 90%;
+  display: flex;
+  align-content: center;
+  justify-content: flex-start;
+}
+
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.logo {
+  height: 60px;
+}
+.menu {
+  width: 60%;
+  display: flex;
+  justify-content: flex-start;
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  text-align: center;
+}
+
+
 
 .header-icon{
  display: flex;
      justify-content: flex-end;
      align-items: center;
      gap: 30px;
-     margin-left: 400px;
 }
 
 
@@ -362,3 +407,4 @@ footer {
 #new{
   font-family: 'Yeseva One';
 }
+
