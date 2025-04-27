@@ -1,76 +1,36 @@
-
-/* 1. GÉNÉRAL            */
-
+/* 1. GÉNÉRAL */
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
   color: #000000;
   background: #fff;
   max-width: 100%;
-
 }
 
 section {
   margin-bottom: 100px;
 }
 
-
-h2{
- 
+h2 {
   font-family: 'Yeseva One', serif;
-  
 }
 
-
-/* 2. HEADER             */
-
-
-.menu li a {
-  text-decoration: none;
-  color: #000000;
-  font-weight: 500;
-
-}
-
-.menu-deroulant {
-  transition: 100ms ;
-}
-.menu-deroulant:hover {
-
-  .sous-menu {
-    display: flex;
-  }
-}
-
-.sous-menu {
-  display: none;
-  list-style: none;
-  text-decoration: none;
-  box-sizing: border-box;
-  padding: 0 5px;
-
-  flex-direction: column;
-  align-items: flex-start;
-  width: 100%;
-
-  transition: 100ms ;
-
-}
-
-.sous-menu li:hover {
-  border-bottom:solid 2px #634841;
-}
-
+/* 2. HEADER */
 header {
   padding: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-bottom: 1px solid #ddd;
+  position: relative;
+  z-index: 1000;
 
-  
-
+  a {
+    color: black;
+    text-decoration: none;
+  }
 }
+
 .header-container {
   width: 90%;
   display: flex;
@@ -86,39 +46,99 @@ header {
 
 .logo {
   height: 60px;
+  margin-right: 50px;
 }
+
 .menu {
   width: 60%;
   display: flex;
   justify-content: flex-start;
   list-style: none;
-  display: flex;
   gap: 30px;
   text-align: center;
+  padding-left: 0;
 }
 
-
-
-.header-icon{
- display: flex;
-     justify-content: flex-end;
-     align-items: center;
-     gap: 30px;
+.menu li {
+  position: relative;
 }
 
+.menu li a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: 500;
+  display: block;
+  padding: 10px 0;
+}
+
+.menu-deroulant {
+  position: relative;
+}
+
+.sous-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+  list-style: none;
+  padding: 10px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  min-width: 180px;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 1001;
+}
+
+.menu-deroulant:hover .sous-menu {
+  display: flex;
+  flex-direction: column;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.sous-menu li {
+  margin: 5px 0;
+  width: 100%;
+  text-align: left;
+}
+
+.sous-menu li a {
+  padding: 8px 0;
+  display: block;
+  transition: all 0.2s ease;
+}
+
+.sous-menu li:hover {
+  border-bottom: solid 2px #A8BBA2;
+}
+
+.header-icon {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 30px;
+}
+
+.header-icon a {
+  display: flex;
+  align-items: center;
+}
 
 /* 3. BANNIÈRE PRINCIPALE */
-
 .banner {
   position: relative;
   height: 80vh;
   overflow: hidden;
 }
+
 .banner-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
+
 .banner-content {
   position: absolute;
   top: 75%;
@@ -127,55 +147,55 @@ header {
   text-align: center;
   color: white;
 }
+
 .banner-content h1 {
   font-family: 'Yeseva One', serif;
   font-size: 48px;
   margin: 0;
 }
+
 .subtitle {
   font-size: 16px;
   margin-bottom: 20px;
 }
+
 .btn-transparent {
   padding: 10px 30px;
   border: 1px solid white;
   background: transparent;
   color: white;
   text-decoration: none;
+  transition: 250ms;
 }
 
+.btn-transparent:hover {
+  background-color: white;
+  color: #000000;
+}
 
-/* 4. INTRODUCTION       */
-
+/* 4. INTRODUCTION */
 .intro-container {
   display: flex;
   justify-content: center;
   gap: 100px;
   width: 100%;
 }
+
 .intro-img {
   width: 35%;
   aspect-ratio: 1/1;
   object-fit: cover;
 }
-.intro-text {
-   h2 {
-    width: 400px;
-    color: #000000;
-  }
+
+.intro-text h2 {
+  width: 400px;
+  color: #000000;
 }
 
 #text-info {
   width: 400px;
-  color:#737373 ;
+  color: #737373;
 }
-
-
-
-
-
-
-
 
 .btn-green {
   background: #A8BBA2;
@@ -184,46 +204,45 @@ header {
   text-decoration: none;
   display: inline-block;
   margin-top: 40px;
-  border-radius:5px ;
-
+  border-radius: 5px;
+  transition: 50ms;
 }
 
+.btn-green:hover {
+  transform: scale(0.95);
+}
 
-
-
-/* 5. DOUBLE IMAGE       */
-
+/* 5. DOUBLE IMAGE */
 .duo-banner {
   background: #6F4E43;
   display: flex;
   justify-content: space-evenly;
   padding: 40px 0;
-  
-  
 }
+
 .duo-banner a {
   position: relative;
   display: block;
 }
+
 .duo-banner img {
   width: 300px;
   height: auto;
-  
-  
 }
+
 .img-container {
   width: 300px;
   height: 350px;
   overflow: hidden;
 }
+
 .zoom {
   transition: 100ms ease-in;
 }
+
 .zoom:hover {
   transform: scale(1.5);
 }
-
-
 
 .duo-banner span {
   position: absolute;
@@ -234,9 +253,7 @@ header {
   font-size: 13px;
 }
 
-
-/* 6. PHILOSOPHIE        */
-
+/* 6. PHILOSOPHIE */
 .philosophie {
   text-align: center;
   padding: 40px;
@@ -245,32 +262,29 @@ header {
   margin: 0 auto;
 }
 
-
-/* 7. NOUVEAUTÉS         */
-
+/* 7. NOUVEAUTÉS */
 .nouveautes {
   padding: 40px;
   text-align: center;
 }
+
 .products {
   display: flex;
-  justify-content:center;
+  justify-content: center;
   gap: 50px;
   margin-top: 60px;
-
 }
+
 .products a {
   text-decoration: none;
   color: inherit;
-  
 }
+
 .products img {
   width: 250px;
   height: auto;
   display: block;
   margin: 0 auto;
- 
-  
 }
 
 .img-container_new {
@@ -279,46 +293,72 @@ header {
   height: 350px;
   overflow: hidden;
 }
+
 .products p {
   text-align: center;
   font-size: 14px;
-  
 }
+
 .products span {
   font-weight: bold;
-  
 }
 
-
-/* 8. ENGAGEMENTS        */
-
+/* 8. ENGAGEMENTS */
 .engagements {
-  background: #f5f5f5;
-  padding: 40px;
+  padding: 40px 20px;
   text-align: center;
 }
-.engagement-list {
-  display: flex;
-  justify-content: center;
+
+.engagements h2 {
+  margin-bottom: 120px;
+}
+
+.engagements-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   gap: 40px;
-  margin-top: 20px;
-}
-.engagement img {
-  width: 40px;
-  height: auto;
-  display: block;
-  margin: 0 auto 10px;
+  max-width: 100%;
+  margin: 0 auto;
 }
 
+.engagement-item {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-/* 9. FOOTER             */
+.icon-container {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+}
+
+.engagement-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.engagement-item h3 {
+  margin: 0 0 15px 0;
+  font-size: 1.2em;
+}
+
+.engagement-item p {
+  margin: 0;
+  font-size: 0.9em;
+  line-height: 1.5;
+  color: #666;
+}
+
+/* 9. FOOTER */
 footer {
-  background-color: #F4F1EE; 
+  background-color: #F4F1EE;
   color: rgb(0, 0, 0);
   padding: 40px 20px;
   font-size: 14px;
 }
-
 
 .footer-container {
   display: flex;
@@ -328,39 +368,48 @@ footer {
   max-width: 1200px;
   margin: 0 auto;
 }
+
 .footer-column {
   flex: 1 1 200px;
 }
+
 .footer-column h4 {
   margin-bottom: 10px;
   font-size: 16px;
   font-family: 'Yeseva One';
 }
+
 .footer-column ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
+
 .footer-column li {
   margin-bottom: 8px;
 }
+
 .footer-column a {
   text-decoration: none;
   color: rgb(14, 13, 13);
 }
+
 .footer-column a:hover {
   text-decoration: underline;
 }
+
 .footer-column form {
   display: flex;
   gap: 10px;
   margin-top: 10px;
 }
+
 .footer-column input {
   padding: 10px;
   border: none;
   flex: 1;
 }
+
 .footer-column button {
   background: #A8BBA2;
   color: white;
@@ -368,20 +417,23 @@ footer {
   border: none;
   cursor: pointer;
 }
+
 .footer-btn {
   display: inline-block;
   margin: 10px 0;
   padding: 10px 20px;
-  border: 1px solid white;
-  color: white;
+  border: 1px solid #A8BBA2;
+  color: #000000;
   text-decoration: none;
   background: transparent;
   transition: background 0.3s;
 }
+
 .footer-btn:hover {
   background: #A8BBA2;
-  color: #1a1a1a;
+  color: white;
 }
+
 .footer-column.social img {
   width: 24px;
   height: 24px;
@@ -390,21 +442,22 @@ footer {
 }
 
 .footer-bottom {
-  
   text-align: center;
   margin-top: 30px;
   border-top: 1px solid #6F4E43;
   padding-top: 20px;
 }
+
 .footer-bottom a {
   color: #737373;
   text-decoration: none;
 }
+
 .footer-bottom a:hover {
   text-decoration: underline;
 }
 
-#new{
+#new {
   font-family: 'Yeseva One';
 }
 

@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="fr">
 
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Green Loom</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Yeseva+One&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Yeseva+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
@@ -20,35 +21,37 @@
           <li class="menu-deroulant">
             <a href="COLLECTION.html">COLLECTION</a>
             <ul class="sous-menu">
-              <li><a href="">Hiver 24-25</a></li>
-              <li><a href="">Printemps 25</a></li>
-              <li><a href="">Été 25</a></li>
-              <li><a href=""></a></li>
+              <li><a href="ete25.html">Summer25</a></li>
+              <li><a href="printemps25.html">Spring25</a></li>
+              <li><a href="hiver24-25.html">Winter24-25</a></li>
             </ul>
-          
           </li>
-          <li><a href="FEMMES.html">FEMMES</a></li>
+          <li class="menu-deroulant">
+            <a href="FEMMES.html">FEMMES</a>
+            <ul class="sous-menu">
+              <li><a href="dresses.html">Dresses</a></li>
+              <li><a href="skirts.html">Skirts</a></li>
+              <li><a href="shorts.html">Shorts</a></li>
+              <li><a href="tops.html">Tops</a></li>
+              <li><a href="pants.html">Pants</a></li>
+              <li><a href="sweaters.html">Sweaters</a></li>
+              <li><a href="jackets.html">Jackets</a></li>
+            </ul>
+          </li>
           <li><a href="NOTRE ENGAGEMENT.html">NOTRE ENGAGEMENT</a></li>
           <li><a href="LA MARQUE.html">LA MARQUE</a></li>
-
-
-
-
-
-        </ul>
-
-        <ul class="header-icon">
-          <a href="coeur.html"><img src="like_favorite_heart_5759.png" width="25px"></a>
-          <a href="recherche.html"><img  src="search_magnifier_icon_145939.png"width="25px" alt=""></a>
-          <a href="compte.html"><img src="person_profile_account_user_icon_255534.png" width="25px"alt=""></a>
-          <a href="shop.html"><img  src="shoppingbag_84031.png"width="21px" alt=""></a>
         </ul>
         
-        
-      </div>
+        <div class="header-icon">
+          <a href="coeur.html"><i class="fa-regular fa-heart"></i></a>
+          <a href="recherche.html"><i class="fa-solid fa-magnifying-glass"></i></a>
+          <a href="compte.html"><i class="fa-regular fa-user"></i></a>
+          <a href="shop.html"><i class="fa-solid fa-bag-shopping"></i></a>
+        </div>
       </nav>
     </div>
   </header>
+
 
   <!-- BANNIÈRE PRINCIPALE -->
   <section class="banner">
@@ -138,25 +141,51 @@
 
   <!-- ENGAGEMENTS -->
   <section class="engagements">
-    <h2>NOS ENGAGEMENTS</h2>
-    <div class="engagement-list">
-      <div class="engagement"><img src="livraison.png" alt>
-        <p>Livraison Offerte</p>
+    <h2>Nos Engagements</h2>
+    
+    <div class="engagements-container">
+      <div class="engagement-item">
+        <div class="icon-container">
+          <img src="camion-de-livraison.png" alt="" class="engagement-icon">
+        </div>
+        <h3>Livraison Offerte</h3>
+        <p>En France Métropolitaine, Belgique et Luxembourg dès 250€ d'achat. En Europe dès 300€ d'achat.</p>
       </div>
-      <div class="engagement"><img src="packaging.png" alt>
-        <p>Packagings Recyclés</p>
+      
+      <div class="engagement-item">
+        <div class="icon-container">
+          <img src="boite-en-carton-fermee-avec-ruban-demballage.png" alt="" class="engagement-icon">
+        </div>
+        <h3>Packagings Recyclés</h3>
+        <p>Tous nos packagings sont recyclés/recyclables et fabrication en France.</p>
       </div>
-      <div class="engagement"><img src="matières.png" alt>
-        <p>Matières Recyclées</p>
+      
+      <div class="engagement-item">
+        <div class="icon-container">
+          <img src="signe-de-recyclage.png" alt="" class="engagement-icon">
+        </div>
+        <h3>Matières Recyclées</h3>
+        <p>Nos tissus sont issus de la valorisation textile. Toutes nos pièces sont conçues à partir de matières déjà existantes.</p>
       </div>
-      <div class="engagement"><img src="fabrication.png" alt>
-        <p>Fabrication Éthique</p>
+      
+      <div class="engagement-item">
+        <div class="icon-container">
+          <img src="sewing-machine_823943.png" alt="" class="engagement-icon">
+        </div>
+        <h3>Fabrication Éthique</h3>
+        <p>Collections produites en petites séries dans des ateliers qualifiés en France et au Maroc.</p>
       </div>
-      <div class="engagement"><img src="paiement.png" alt>
-        <p>Paiement Sécurisé</p>
+      
+      <div class="engagement-item">
+        <div class="icon-container">
+          <img src="credit-card_5105934.png" alt="Paiement Sécurisé" class="engagement-icon">
+        </div>
+        <h3>Paiement Sécurisé</h3>
+        <p>CB/visa/mastercard/amex et x2 et x3.</p>
       </div>
     </div>
   </section>
+ 
 
   <!-- FOOTER -->
   <footer>
@@ -199,7 +228,7 @@
       <!-- Colonne : Réseaux sociaux -->
       <div class="footer-column social">
         <h4>Suivez-nous</h4>
-        <a href="#"><img src="instagram_insta_logo_icon_250828 04.07.49.png" alt=""></a>
+        <a href="#"><img src="sociale.png" alt=""></a>
         <a href="#"><img  src="youtube_1077046.png" alt=""></a>
         
       </div>
